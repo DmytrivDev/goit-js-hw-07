@@ -1,12 +1,11 @@
 const categoriesList = document.querySelectorAll('.item');
-const catsLength = categoriesList.length;
 
-console.log(`Number of categories: ${catsLength}`);
+console.log(`Number of categories: ${categoriesList.length}`);
 
 categoriesList.forEach(element => {
     const catName = element.querySelector('h2').textContent;
-    const underCatsLength = element.querySelectorAll('li').length;
+    const subCategoryCount = element.querySelectorAll('li').length;
 
     console.log(`Category: ${catName}`);
-    console.log(`Elements: ${underCatsLength}`);
+    console.log(`Elements: ${subCategoryCount}`);
 });

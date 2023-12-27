@@ -29,9 +29,12 @@ const images = [
 ];
 
 
-const galery = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery');
+let galleryCode = '';
 
 images.forEach(image => {
   const item = `<li><img src="${image.url}" alt="${image.alt}" /></li>`
-  galery.insertAdjacentHTML('beforeend', item);
+  galleryCode += item;
 });
+
+gallery.innerHTML = galleryCode;

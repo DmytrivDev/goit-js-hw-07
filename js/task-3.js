@@ -1,7 +1,7 @@
 const input = document.querySelector('#name-input');
 const output = document.querySelector('#name-output');
 
-const outputF = event => {
+const updateOutput = event => {
     const value = event.currentTarget.value.trim();
 
     if(value.length > 0) {
@@ -12,4 +12,4 @@ const outputF = event => {
     
 }
 
-input.addEventListener('input', outputF);
+input.addEventListener('input', updateOutput);

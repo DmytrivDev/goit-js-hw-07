@@ -6,16 +6,14 @@ function getRandomHexColor() {
 
 
 const body = document.querySelector('body');
-const cokorOutput = document.querySelector('span.color');
+const colorOutput = document.querySelector('span.color');
 const button = document.querySelector('button.change-color');
 
 button.addEventListener('click', changeColor);
 
-function changeColor(event) {
-  event.preventDefault();
-  
+function changeColor(event) {  
   const newColor = getRandomHexColor();
 
   body.style.backgroundColor = newColor;
-  cokorOutput.textContent = newColor;
+  colorOutput.textContent = newColor;
 }
