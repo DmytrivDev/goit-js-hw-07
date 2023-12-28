@@ -21,8 +21,8 @@ function createBoxes(event) {
     for(let i = 0; i < val; i += 1) {
       const box = document.createElement('div');
       box.style.backgroundColor = getRandomHexColor();
-      box.style.width = startSize+'px';
-      box.style.height = startSize+'px';
+      box.style.width = startSize +'px';
+      box.style.height = startSize +'px';
     
       boxes.append(box);
       startSize += 10;
@@ -33,7 +33,7 @@ function createBoxes(event) {
 }
 
 function deleteBoxes(event) {  
-  boxes.innerHTML = '';
+  boxes.textContent = '';
 } 
 
 buttonCr.addEventListener('click', createBoxes);
