@@ -11,8 +11,6 @@ const buttonDs = controls.querySelector('button[data-destroy]');
 const boxes = document.querySelector('#boxes');
 
 function createBoxes(event) {
-  event.preventDefault;
-
   const min = Number(input.getAttribute('min'));
   const max = Number(input.getAttribute('max'));
   const val = Number(input.value);
@@ -27,17 +25,16 @@ function createBoxes(event) {
       box.style.height = startSize+'px';
     
       boxes.append(box);
-      input.value = '';
       startSize += 10;
     }
+
+    input.value = '';
   }
 }
 
-function dalateBoxes(event) {
-  event.preventDefault;
-  
+function deleteBoxes(event) {  
   boxes.innerHTML = '';
-}
+} 
 
 buttonCr.addEventListener('click', createBoxes);
-buttonDs.addEventListener('click', dalateBoxes);
+buttonDs.addEventListener('click', deleteBoxes);
