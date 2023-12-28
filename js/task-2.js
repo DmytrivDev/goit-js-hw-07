@@ -36,5 +36,5 @@ images.forEach(image => {
   const item = `<li><img src="${image.url}" alt="${image.alt}" /></li>`
   galleryCode += item;
 });
-
+ 
 gallery.innerHTML = galleryCode;
